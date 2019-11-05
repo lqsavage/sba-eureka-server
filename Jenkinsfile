@@ -6,7 +6,7 @@ pipeline {
 		GIT_CRED = "a2a33599-8110-4059-beff-06537fca7e89"
 		DOCKER_REPO="registry.cn-hangzhou.aliyuncs.com/dev_savage/sba-eureka"
 		DOCKER_REG="registry.cn-hangzhou.aliyuncs.com"
-		DOCKER_REG_KEY = "3f529905-9b7a-4748-ac89-d76c3768e3cb"
+		DOCKER_REG_KEY = "8ca82a1c-4869-46d6-93f6-07af36ca23aa"
 		dockerImage = ''
       
     }
