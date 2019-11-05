@@ -2,9 +2,9 @@ pipeline {
     agent any
     environment {
       
-	    GIT_URL = "https://github.com/lqsavage/sba-eureka-server.git"
-		GIT_CRED = "be1412b5122d30d9fac5fe5d032eb96fd79ece49"
-		DOCKER_REPO="registry.cn-hangzhou.aliyuncs.com/dev_savage/sba-registry"
+	    GIT_URL = "git@github.com:lqsavage/sba-eureka-server.git"
+		GIT_CRED = "a2a33599-8110-4059-beff-06537fca7e89"
+		DOCKER_REPO="registry.cn-hangzhou.aliyuncs.com/dev_savage/sba-eureka"
 		DOCKER_REG="registry.cn-hangzhou.aliyuncs.com"
 		DOCKER_REG_KEY = "3f529905-9b7a-4748-ac89-d76c3768e3cb"
 		dockerImage = ''
