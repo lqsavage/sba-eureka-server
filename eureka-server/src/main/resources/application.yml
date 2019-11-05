@@ -1,0 +1,56 @@
+spring:
+    profiles:
+        active: local
+---
+spring:
+    profiles: local
+    application:
+        name: '@project.name@'
+    sleuth:
+        sampler:
+            probability: 1.0
+    zipkin:
+        base-url: http://localhost:9090/
+server:
+    host: localhost
+    port: 8761
+eureka:
+    client:
+        fetch-registry: 'false '
+        fetchRegistry: false
+        register-with-eureka: 'false '
+        registerWithEureka: false
+        service-url:
+            defaultZone: http://${server.host}:${server.port}/eureka/
+    instance:
+        prefer-ip-address: true
+        hostname: 'localhost'
+        instance-id: ${spring.application.name}:${server.port}
+    environment: dev
+
+---
+spring:
+    profiles: k8s
+    application:
+        name: '@project.name@'
+    sleuth:
+        sampler:
+            probability: 1.0
+    zipkin:
+        base-url: http://zipkin-server:9090/
+server:
+    port: 8761
+eureka:
+    client:
+        fetch-registry: 'false '
+        fetchRegistry: false
+        register-with-eureka: 'false '
+        registerWithEureka: false
+        service-url:
+            defaultZone: http://${spring.application.name}:${server.port}/eureka/
+    instance:
+        prefer-ip-address: true
+        hostname: ${spring.application.name}
+        instance-id: ${spring.application.name}:${server.port}
+    environment: k8s
+
