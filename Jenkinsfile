@@ -5,7 +5,7 @@ pipeline {
 	    GIT_URL = "https://github.com/lqsavage/sba-eureka-server.git"
 		GIT_CRED = "a2a33599-8110-4059-beff-06537fca7e89"
 		DOCKER_REPO="registry.cn-hangzhou.aliyuncs.com/dev_savage/sba-eureka"
-		DOCKER_REG="registry.cn-hangzhou.aliyuncs.com"
+		DOCKER_REG="https://registry.cn-hangzhou.aliyuncs.com"
 		DOCKER_REG_KEY = "8ca82a1c-4869-46d6-93f6-07af36ca23aa"
 		dockerImage = ''
       
